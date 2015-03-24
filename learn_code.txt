@@ -1,4 +1,4 @@
-Welcome to Git (version 1.9.5-preview20141217)
+﻿Welcome to Git (version 1.9.5-preview20141217)
 
 
 Run 'git help git' to display the help index.
@@ -141,4 +141,153 @@ On branch master
 nothing to commit, working directory clean
 
 zhoubh@ZHOUBH /f/GitHub/learngit (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   learn_code.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+zhoubh@ZHOUBH /f/GitHub/learngit (master)
+$ git add learn_code.txt
+
+zhoubh@ZHOUBH /f/GitHub/learngit (master)
+$ git commit -m "learngit code"
+[master 150e159] learngit code
+ 1 file changed, 66 insertions(+)
+
+zhoubh@ZHOUBH /f/GitHub/learngit (master)
+$ git add readme.txt
+
+zhoubh@ZHOUBH /f/GitHub/learngit (master)
+$ git commit -m "append GPL"
+[master dc35fce] append GPL
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+
+zhoubh@ZHOUBH /f/GitHub/learngit (master)
+$ git log
+commit dc35fce67d660f46fe51646e09494730d4af09f5
+Author: zhoubh <zhoubh@asiainfo.com>
+Date:   Tue Mar 24 09:50:13 2015 +0800
+
+    append GPL
+
+commit 150e159468b7f6a0bdb1b872721292b5b7e2e31a
+Author: zhoubh <zhoubh@asiainfo.com>
+Date:   Tue Mar 24 09:49:11 2015 +0800
+
+    learngit code
+
+commit 29760984a3324f92ab2d59e84583436b13da5595
+Author: zhoubh <zhoubh@asiainfo.com>
+Date:   Tue Mar 24 09:47:26 2015 +0800
+
+    add distributed
+
+commit fc9356f7f8e24c6b939acac4dbf3d5dae2b8c32c
+Author: zhoubh <zhoubh@asiainfo.com>
+Date:   Tue Mar 24 09:43:50 2015 +0800
+
+    add 3 files
+
+commit b3678f5445ab79e6024d793f285642f53d34861e
+Author: zhoubh <zhoubh@asiainfo.com>
+Date:   Tue Mar 24 09:41:15 2015 +0800
+
+    wrote a readme file
+
+zhoubh@ZHOUBH /f/GitHub/learngit (master)
 $
+
+zhoubh@ZHOUBH /f/GitHub/learngit (master)
+$ git log --pretty=onelime
+fatal: invalid --pretty format: onelime
+
+zhoubh@ZHOUBH /f/GitHub/learngit (master)
+$ git log --pretty=oneline
+dc35fce67d660f46fe51646e09494730d4af09f5 append GPL
+150e159468b7f6a0bdb1b872721292b5b7e2e31a learngit code
+29760984a3324f92ab2d59e84583436b13da5595 add distributed
+fc9356f7f8e24c6b939acac4dbf3d5dae2b8c32c add 3 files
+b3678f5445ab79e6024d793f285642f53d34861e wrote a readme file
+
+zhoubh@ZHOUBH /f/GitHub/learngit (master)
+$
+
+zhoubh@ZHOUBH /f/GitHub/learngit (master)
+$ git reset --hard HEAD^
+HEAD is now at 150e159 learngit code
+
+zhoubh@ZHOUBH /f/GitHub/learngit (master)
+$ cat readme.txt
+Git is a version control system.
+Git is free software.
+
+Git is a distributed version control system.
+Git is free software.
+zhoubh@ZHOUBH /f/GitHub/learngit (master)
+$
+
+zhoubh@ZHOUBH /f/GitHub/learngit (master)
+$ git log
+commit 150e159468b7f6a0bdb1b872721292b5b7e2e31a
+Author: zhoubh <zhoubh@asiainfo.com>
+Date:   Tue Mar 24 09:49:11 2015 +0800
+
+    learngit code
+
+commit 29760984a3324f92ab2d59e84583436b13da5595
+Author: zhoubh <zhoubh@asiainfo.com>
+Date:   Tue Mar 24 09:47:26 2015 +0800
+
+    add distributed
+
+commit fc9356f7f8e24c6b939acac4dbf3d5dae2b8c32c
+Author: zhoubh <zhoubh@asiainfo.com>
+Date:   Tue Mar 24 09:43:50 2015 +0800
+
+    add 3 files
+
+commit b3678f5445ab79e6024d793f285642f53d34861e
+Author: zhoubh <zhoubh@asiainfo.com>
+Date:   Tue Mar 24 09:41:15 2015 +0800
+
+    wrote a readme file
+
+zhoubh@ZHOUBH /f/GitHub/learngit (master)
+$ git reset --hard dc35fc
+HEAD is now at dc35fce append GPL
+
+zhoubh@ZHOUBH /f/GitHub/learngit (master)
+$ cat readme.txt
+Git is a distributed version control system.
+Git is free software distributed under the GPL.
+
+zhoubh@ZHOUBH /f/GitHub/learngit (master)
+$ git reflog
+dc35fce HEAD@{0}: reset: moving to dc35fc
+150e159 HEAD@{1}: reset: moving to HEAD^
+dc35fce HEAD@{2}: commit: append GPL
+150e159 HEAD@{3}: commit: learngit code
+2976098 HEAD@{4}: commit: add distributed
+fc9356f HEAD@{5}: commit: add 3 files
+b3678f5 HEAD@{6}: commit (initial): wrote a readme file
+
+zhoubh@ZHOUBH /f/GitHub/learngit (master)
+$
+
+
+现在总结一下：
+
+HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令git reset --hard commit_id。
+
+
+穿梭前，用git log可以查看提交历史，以便确定要回退到哪个版本。
+
+
+要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本。
+
+
