@@ -76,3 +76,69 @@ $ git commit -m "wrote a readme file"
 
 zhoubh@ZHOUBH /f/GitHub/learngit (master)
 $
+
+zhoubh@ZHOUBH /f/GitHub/learngit (master)
+$ git add file1.txt file2.txt learn_code.txt
+
+zhoubh@ZHOUBH /f/GitHub/learngit (master)
+$ git commit -m "add 3 files"
+[master fc9356f] add 3 files
+ 3 files changed, 78 insertions(+)
+ create mode 100644 file1.txt
+ create mode 100644 file2.txt
+ create mode 100644 learn_code.txt
+
+zhoubh@ZHOUBH /f/GitHub/learngit (master)
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+zhoubh@ZHOUBH /f/GitHub/learngit (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   readme.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+zhoubh@ZHOUBH /f/GitHub/learngit (master)
+$ git diff readme.txt
+diff --git a/readme.txt b/readme.txt
+index d8036c1..97fe984 100644
+--- a/readme.txt
++++ b/readme.txt
+@@ -1,2 +1,5 @@
+ Git is a version control system.
++Git is free software.
++
++Git is a distributed version control system.
+ Git is free software.
+\ No newline at end of file
+
+zhoubh@ZHOUBH /f/GitHub/learngit (master)
+$ git add  readme.txt
+
+zhoubh@ZHOUBH /f/GitHub/learngit (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   readme.txt
+
+
+zhoubh@ZHOUBH /f/GitHub/learngit (master)
+$ git commit -m "add distributed"
+[master 2976098] add distributed
+ 1 file changed, 3 insertions(+)
+
+zhoubh@ZHOUBH /f/GitHub/learngit (master)
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+zhoubh@ZHOUBH /f/GitHub/learngit (master)
+$
