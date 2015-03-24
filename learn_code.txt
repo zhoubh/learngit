@@ -1,0 +1,78 @@
+Welcome to Git (version 1.9.5-preview20141217)
+
+
+Run 'git help git' to display the help index.
+Run 'git help <command>' to display help for specific commands.
+
+zhoubh@ZHOUBH /C/Users/zhoubh/Desktop
+$ git  config --global user.name "zhoubh"
+
+zhoubh@ZHOUBH /C/Users/zhoubh/Desktop
+$ git config --global user.email "zhoubh@asiainfo.com"
+
+zhoubh@ZHOUBH /C/Users/zhoubh/Desktop
+$ f:
+sh: f:: command not found
+
+zhoubh@ZHOUBH /C/Users/zhoubh/Desktop
+$ cd f:
+
+zhoubh@ZHOUBH /f
+$ ls
+$RECYCLE.BIN  QQMusicCache   System Volume Information  oracle        ??????
+GitHub        SPARK          VMware                     pagefile.sys
+Photoshopcs3  Shoujizhushou  kcdown                     test.txt
+
+zhoubh@ZHOUBH /f
+$ cd GitHub/
+
+zhoubh@ZHOUBH /f/GitHub
+$ ls
+Git-1.9.5-preview20141217.exe     pygame-1.9.1release
+Sublime Text 2.0.2 x64 Setup.exe  pygame-1.9.1release.tar.gz
+Sublime Text 2.0.2 x64.tar.bz2    pygame-1.9.1release.zip
+Sum.scala                         pygame-1.9.2a0.win-amd64-py2.7.exe
+cx_Oracle-5.1.tar.gz              pygame_base_template.py
+cygwin2.738                       redis-2.8.17.tar.gz
+cygwin2.738.zip                   scala.txt
+down_tianya.py                    spark-1.1.0
+ftp.py                            spark-1.1.0.zip
+get_html.py                       tdw.zip
+printargs                         tuxmathscrabble-master
+printargs.scala                   tuxmathscrabble-master.zip
+protobuf-2.5.0.tar.gz             yufa.py
+protoc-2.5.0-win32.zip            yufa.py1
+protoc.exe                        zbh.scala
+pygame-1.9.1.win32-py2.7.msi      zlib-1.2.7.tar.gz
+
+zhoubh@ZHOUBH /f/GitHub
+$ mkdir learngit
+
+zhoubh@ZHOUBH /f/GitHub
+$ cd learngit/
+
+zhoubh@ZHOUBH /f/GitHub/learngit
+$ ls
+
+zhoubh@ZHOUBH /f/GitHub/learngit
+$ pwd
+/f/GitHub/learngit
+
+zhoubh@ZHOUBH /f/GitHub/learngit
+$ git init
+Initialized empty Git repository in f:/GitHub/learngit/.git/
+
+zhoubh@ZHOUBH /f/GitHub/learngit (master)
+$
+
+zhoubh@ZHOUBH /f/GitHub/learngit (master)
+$ git add readme.txt
+
+zhoubh@ZHOUBH /f/GitHub/learngit (master)
+$ git commit -m "wrote a readme file"
+[master (root-commit) b3678f5] wrote a readme file
+ 1 file changed, 2 insertions(+)
+ create mode 100644 readme.txt
+
+zhoubh@ZHOUBH /f/GitHub/learngit (master)
+$
